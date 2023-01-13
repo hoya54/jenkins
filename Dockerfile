@@ -1,4 +1,14 @@
-FROM adoptopenjdk/openjdk11
-ARG JAR_FILE=demo.jar
-COPY ${JAR_FILE} demo.jar
-ENTRYPOINT ["java", "-jar","/demo.jar"]
+FROM node:14.14
+WORKDIR /client
+
+COPY package.json .
+
+ADD . .
+
+RUN npm install
+
+RUN npm rebuild node-sass
+
+EXPOSE 9999
+
+CMD ["npm", "run",  "serve"]
