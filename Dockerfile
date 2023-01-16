@@ -11,4 +11,4 @@ RUN npm rebuild node-sass
 
 EXPOSE 9999
 
-CMD ["npm", "staert"]
+CMD ["npm", "start"]
