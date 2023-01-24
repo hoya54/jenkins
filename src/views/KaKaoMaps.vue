@@ -13,7 +13,7 @@
 
         <b-row id="buttons">
           
-          <b-button type="success" @click="findAddress">스프링에 요청 전송2</b-button>
+          <b-button type="success" @click="findAddress">스프링에 요청 전송3</b-button>
           <div id="location_select">
           </div>
         </b-row>
